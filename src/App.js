@@ -138,7 +138,7 @@ function placeOrder(){
             <p className="cartheading">CART ITEMS</p>
             <div className="cartdisplay">
             {
-                cartItems.filter(item => item.isInCart==true).map(finalCartItem => {
+                cartItems.filter(item => item.isInCart===true).map(finalCartItem => {
                     return(
                         <div className="eachItem">
                             <b>{finalCartItem.name}</b><b>${finalCartItem.price}</b><button id={finalCartItem.id} className='btn btn-danger' onClick={removeFromCart}>Remove From Cart</button>
